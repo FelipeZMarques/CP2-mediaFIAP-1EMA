@@ -1,0 +1,79 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/FelipeZMarques/CP2-mediaFIAP-1EMA/blob/main/calculadora%20de%20m%C3%A9dia%20v1%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cp1 = float(input(\"nota da cp 1 do primeiro semestre(de 0 a 100):\"))\n",
+        "cp2 = float(input(\"nota da cp 2 do primeiro semestre(de 0 a 100):\"))\n",
+        "cp3 = float(input(\"nota da cp 3 do primeiro semestre(de 0 a 100):\"))\n",
+        "glob = float(input(\"de a nota da sua global solution do primeiro semestre(de 0 a 100):\"))\n",
+        "\n",
+        "notascp = [cp1, cp2, cp3]\n",
+        "menor = min(notascp)\n",
+        "\n",
+        "soma = cp1 + cp2 + cp3 - menor\n",
+        "mediacp1 = soma / 2\n",
+        "\n",
+        "#//////////////////////////////////////\n",
+        "\n",
+        "cp11 = float(input(\"nota da cp 1 do segundo semestre(de 0 a 100):\"))\n",
+        "cp22 = float(input(\"nota da cp 2 do segundo semestre(de 0 a 100):\"))\n",
+        "cp33 = float(input(\"nota da cp 3 do segundo semestre(de 0 a 100):\"))\n",
+        "glob2 = float(input(\"de a nota da sua global solution do segundo semestre(de 0 a 100):\"))\n",
+        "\n",
+        "notascp2 = [cp11, cp22, cp33]\n",
+        "menor2 = min(notascp2)\n",
+        "\n",
+        "soma2 = cp11 + cp22 + cp33 - menor2\n",
+        "mediacp2 = soma2 / 2\n",
+        "\n",
+        "\n",
+        "m2s = (0.40 * mediacp2) + (0.60 * glob2)\n",
+        "\n",
+        "#/////////////////////////////////////////\n",
+        "\n",
+        "mf = (0.40 * m1s) + (0.60 * m2s)\n",
+        "\n",
+        "if mf <= 39:\n",
+        "  print(f\"reprovado com {mf} de nota\")\n",
+        "elif mf >= 60:\n",
+        "  print(f\"aprovado com {mf} de nota\")\n",
+        "else:\n",
+        "  print(f\"você esta de exame com {mf} de nota\")\n",
+        "  exame = float(input(\"de a nota do seu exame(de 0 a 100):\"))\n",
+        "  if exame > 120 - mf:\n",
+        "    print (\"aprovado\")\n",
+        "  else:\n",
+        "    print (\"reprovado\")"
+      ],
+      "metadata": {
+        "id": "CSNyq4SFyq2u"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Damos-lhe as boas-vindas ao Colab",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
